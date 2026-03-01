@@ -28,7 +28,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './styles/custom.css';
 
 // asset paths - logo als png
-const logoSrc = '/logo/La Vida Logo.png';
+const logoSrc = '/logo/La%20Vida%20Logo.png';
 
 // import images from /images folder
 const galleryImages: string[] = [
@@ -96,7 +96,7 @@ const HistorySection: React.FC = () => {
           <div className="col-12 col-lg-6">
             <div className="position-relative">
               <img 
-                src="/images/image14.jpeg"
+                src="/images-bahnhof/image14.jpeg"
                 alt="bahnhof langendreer historisch"
                 className="img-fluid rounded"
                 style={{ 
