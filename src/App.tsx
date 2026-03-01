@@ -28,7 +28,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './styles/custom.css';
 
 // asset paths - logo als png
-const logoSrc = '/logo/La%20Vida%20Logo.png';
+const logoSrc = '/logo/logo.png';
 
 // import images from /images folder
 const galleryImages: string[] = [
@@ -39,10 +39,12 @@ const galleryImages: string[] = [
   '/images/image6.jpeg',
   '/images/image9.jpeg',
   '/images/image10.jpeg',
+  '/images-archiv/image11.jpeg',
   '/images/image12.jpeg',
   '/images/image13.jpeg',
   '/images/image15.jpeg',
   '/images/image16.jpeg',
+  '/images-archiv/image17.jpeg',
   '/images/image18.jpeg',
   '/images/image19.jpeg',
   '/images/image20.jpeg',
