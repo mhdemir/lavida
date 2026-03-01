@@ -32,22 +32,167 @@ const logoSrc = '/logo/La Vida Logo.png';
 
 // import images from /images folder
 const galleryImages: string[] = [
-  '/images/image1.jpeg',
   '/images/image2.jpeg',
   '/images/image3.jpeg',
   '/images/image4.jpeg',
   '/images/image5.jpeg',
   '/images/image6.jpeg',
-  '/images/image7.jpeg',
-  '/images/image8.jpeg',
   '/images/image9.jpeg',
   '/images/image10.jpeg',
-  '/images/image11.jpeg',
   '/images/image12.jpeg',
   '/images/image13.jpeg',
-  '/images/image14.jpeg',
   '/images/image15.jpeg',
+  '/images/image16.jpeg',
+  '/images/image18.jpeg',
+  '/images/image19.jpeg',
+  '/images/image20.jpeg',
+  '/images/image21.jpeg',
+  '/images/image22.jpeg',
+  '/images/image23.jpeg',
 ];
+
+// history section component
+const HistorySection: React.FC = () => {
+  return (
+    <section 
+      id="history"
+      className="section-padding"
+      aria-labelledby="history-heading"
+      style={{ backgroundColor: '#070E0F', color: '#FFF9FB' }}
+    >
+      <div className="container">
+        <div className="row align-items-center g-5">
+          {/* text content */}
+          <div className="col-12 col-lg-6">
+            <h2 id="history-heading" className="display-5 mb-4">
+              vom preußen-glanz zum kulturherz
+            </h2>
+            
+            <div className="fs-5" style={{ color: '#9D9597', lineHeight: '1.8' }}>
+              <p className="mb-4">
+                wo heute im la vida die aromen vieler kulturen verschmelzen, pulsierte schon 1908 das leben. einst als repräsentativer prachtbau im jugendstil erbaut, war der bahnhof langendreer das tor zur welt für das aufstrebende ruhrgebiet. wo früher reisepäck verladen wurde und dampfloks schnauften, empfangen wir euch heute in historischem ambiente.
+              </p>
+              
+              <p className="mb-4">
+                nach dem ende der kohle-ära drohte dem gebäude der stillstand - doch 1986 begann eine neue epoche. aus dem stillgelegten bahnhof wurde ein wichtiges soziokulturelles zentrum nrws.
+              </p>
+              
+              <p className="mb-4">
+                heute ist der bahnhof mehr als nur ein denkmal: er ist ein ort der begegnung, der musik und der politik. und mittendrin laden wir euch ein, die reise fortzusetzen - nicht auf schienen, sondern auf dem teller.
+              </p>
+              
+              <a 
+                href="https://bahnhof-langendreer.de/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline-light mt-3"
+              >
+                mehr zum bahnhof langendreer
+              </a>
+            </div>
+          </div>
+          
+          {/* image */}
+          <div className="col-12 col-lg-6">
+            <div className="position-relative">
+              <img 
+                src="/images/image14.jpeg"
+                alt="bahnhof langendreer historisch"
+                className="img-fluid rounded"
+                style={{ 
+                  boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
+                  width: '100%',
+                  objectFit: 'cover'
+                }}
+              />
+              {/* decorative border */}
+              <div 
+                className="position-absolute"
+                style={{
+                  top: '20px',
+                  left: '20px',
+                  right: '-20px',
+                  bottom: '-20px',
+                  border: '2px solid #A7754D',
+                  borderRadius: '0.5rem',
+                  zIndex: -1
+                }}
+                aria-hidden="true"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// culinary journey section component
+const CulinaryJourneySection: React.FC = () => {
+  return (
+    <section 
+      id="culinary-journey"
+      className="section-padding"
+      aria-labelledby="culinary-heading"
+      style={{ backgroundColor: '#FFF9FB' }}
+    >
+      <div className="container">
+        <div className="row align-items-center g-5">
+          {/* image left */}
+          <div className="col-12 col-lg-6 order-2 order-lg-1">
+            <div className="position-relative text-center">
+              <img 
+                src="/images archiv/image1.jpeg"
+                alt="kulinarische weltreise bei la vida"
+                className="img-fluid rounded"
+                style={{ 
+                  boxShadow: '0 20px 40px rgba(0,0,0,0.15)',
+                  maxWidth: '85%',
+                  objectFit: 'cover'
+                }}
+              />
+              {/* decorative border */}
+              <div 
+                className="position-absolute"
+                style={{
+                  top: '20px',
+                  left: '-20px',
+                  right: '20px',
+                  bottom: '-20px',
+                  border: '2px solid #740E14',
+                  borderRadius: '0.5rem',
+                  zIndex: -1
+                }}
+                aria-hidden="true"
+              />
+            </div>
+          </div>
+          
+          {/* text content right */}
+          <div className="col-12 col-lg-6 order-1 order-lg-2">
+            <h2 id="culinary-heading" className="display-5 mb-4" style={{ color: '#740E14' }}>
+              eine kulinarische weltreise bei la vida
+            </h2>
+            
+            <div className="fs-5" style={{ color: '#5D5557', lineHeight: '1.8' }}>
+              <p className="mb-4">
+                unsere speisekarte ist so international wie die geschichten unserer gäste. von aromatischen meze aus dem arabischen und kurdischen raum über spezialitäten aus der türkei, armenien und griechenland bis hin zu mediterranen tapas aus spanien und portugal sowie fein abgestimmten aromen aus dem iran, bei uns verschmelzen kulturen zu einem einzigartigen geschmackserlebnis.
+              </p>
+              
+              <p className="mb-4">
+                jedes gericht erzählt seine eigene geschichte und lädt dazu ein, neues zu entdecken, zu teilen und gemeinsam zu genießen. la vida steht für vielfalt, gastfreundschaft und eine kulinarische reise rund um die welt, auf einem tisch.
+              </p>
+              
+              <p className="mb-0 fw-semibold" style={{ color: '#740E14' }}>
+                dein abenteuer beginnt mit dem nächsten bissen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 // contact info component
 const ContactInfo: React.FC = () => {
@@ -164,7 +309,7 @@ const ImpressumModal: React.FC<ImpressumModalProps> = ({ isOpen, onClose }) => {
             {/* Body */}
             <div className="modal-body p-4" style={{ color: '#070E0F' }}>
               <div className="mb-3">
-                <strong style={{ color: '#740E14' }}>la vida GmbH</strong><br />
+                <strong style={{ color: '#740E14' }}>La Vida GmbH</strong><br />
                 Wallbaumweg 108<br />
                 44894 Bochum
               </div>
@@ -185,7 +330,7 @@ const ImpressumModal: React.FC<ImpressumModalProps> = ({ isOpen, onClose }) => {
               
               <div className="mb-3">
                 <strong>Vertreten durch:</strong><br />
-                Gülcan Ilbay
+                G. Ilbay
               </div>
               
               <div className="mb-3">
@@ -241,8 +386,6 @@ interface FooterProps {
 
 // footer component
 const Footer: React.FC<FooterProps> = ({ onImpressumClick }) => {
-  const currentYear = new Date().getFullYear();
-
   const socialLinks = useMemo(() => [
     { icon: <Instagram size={20} />, href: 'https://www.instagram.com/lavida.tapas/?hl=de', label: 'instagram' },
     { icon: (
@@ -263,9 +406,12 @@ const Footer: React.FC<FooterProps> = ({ onImpressumClick }) => {
         <div className="row g-4">
           {/* brand */}
           <div className="col-12 col-md-4">
-            <h4 className="h3 mb-3 d-flex align-items-center gap-2">
-              <span style={{ color: '#A7754D' }}>la</span> vida
-            </h4>
+            <img 
+              src={logoSrc}
+              alt="la vida"
+              className="mb-3"
+              style={{ maxHeight: '60px', objectFit: 'contain' }}
+            />
             <p className="mb-4" style={{ color: '#9D9597' }}>
               tapas, meze, vino, musik – erlebe mediterrane lebensart in entspannter atmosphäre.
             </p>
@@ -309,7 +455,7 @@ const Footer: React.FC<FooterProps> = ({ onImpressumClick }) => {
                   <a 
                     href={link.href}
                     className="text-decoration-none"
-                    style={{ color: '#9D9597', transition: 'color 0.3s ease', cursor: link.onClick ? 'pointer' : 'default' }}
+                    style={{ color: '#9D9597', transition: 'color 0.3s ease', cursor: link.onClick !== undefined ? 'pointer' : 'default' }}
                     onClick={(e) => {
                       if (link.onClick) {
                         e.preventDefault();
@@ -340,7 +486,7 @@ const Footer: React.FC<FooterProps> = ({ onImpressumClick }) => {
                 <UtensilsCrossed size={16} /> authentische tapas
               </li>
               <li className="mb-2 d-flex align-items-center gap-2">
-                <Wine size={16} /> spanische weine
+                <Wine size={16} /> internationaler wein
               </li>
               <li className="mb-2 d-flex align-items-center gap-2">
                 <Music size={16} /> mediterranes ambiente
@@ -387,6 +533,12 @@ const App: React.FC = () => {
       <main>
         {/* hero section */}
         <Hero logoSrc={logoSrc} />
+
+        {/* history section */}
+        <HistorySection />
+
+        {/* culinary journey section */}
+        <CulinaryJourneySection />
 
         {/* specials section */}
         <Specials />

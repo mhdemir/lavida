@@ -9,7 +9,7 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ 
-  backgroundImage = '/images/image1.jpeg',
+  backgroundImage = '/images/image2.jpeg',
   logoSrc 
 }) => {
   const scrollToMenu = useCallback((): void => {
@@ -107,8 +107,8 @@ export const Hero: React.FC<HeroProps> = ({
         </p>
 
         {/* tagline */}
-        <p className="fs-5 mb-5 mx-auto" style={{ maxWidth: '600px', opacity: 0.9 }}>
-          erlebe mediterrane lebensart in entspannter atmosphäre.
+        <p className="fs-3 mb-5 mx-auto fw-semibold" style={{ maxWidth: '700px', opacity: 0.95, letterSpacing: '0.03em' }}>
+          viele kulturen. ein tisch. unendlicher genuss.
         </p>
 
         {/* feature icons */}

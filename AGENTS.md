@@ -81,3 +81,22 @@ Vor JEDERHandlung, Code-Generierung oder Datei-Operation:
 
 ### 2. Pflicht zur Code-Inspektion (Pre-Write)
 - **JEDER** Code-Block muss VOLLSTÄNDIG im Terminal ausgegeben werden, BEVOR er in eine Datei geschrieben wird.
+
+## ANTI-HALLUZINATIONS-REGEL - STRENG VERBINDLICH
+
+**KEINE ERGÄNZUNG ODER ERFINDUNG VON INFORMATIONEN:**
+- Du darfst NIE Informationen erfinden, ergänzen oder halluzinieren, die vom User nicht explizit bereitgestellt wurden.
+- Gib IMMER NUR das zurück, was der User angefragt hat - weder mehr noch weniger.
+- Bei unklaren Anweisungen: FRAGE NACH, anstatt selbst zu interpretieren oder zu ergänzen.
+- Bei fehlenden Informationen: Gib dies explizit an, statt Lücken zu füllen.
+
+**Beispiele für VERBOTENES Verhalten:**
+- Eigene Beschreibungen zu Bildern erfinden
+- Nicht vorhandene Funktionen oder Features hinzufügen
+- Texte eigenständig erweitern oder umschreiben ohne Anweisung
+- Annahmen über den Inhalt treffen ohne Bestätigung
+
+**Richtiges Verhalten:**
+- Wortwörtliche Umsetzung der Anweisungen
+- Exakte Übernahme von Texten ohne Modifikation
+- Bei Unsicherheit: Rückfrage statt Eigeninitiative

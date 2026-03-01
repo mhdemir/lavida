@@ -53,6 +53,19 @@
 }
 
 /* ============================================
+   global text transform - lowercase
+   ============================================ */
+body {
+  text-transform: lowercase;
+}
+
+/* Ausnahme für Impressum Modal - korrekte Groß-/Kleinschreibung */
+.modal-content,
+.modal-content * {
+  text-transform: none;
+}
+
+/* ============================================
    bootstrap overrides
    ============================================ */
 
@@ -332,7 +345,7 @@
 }
 
 .tag-badge.vegan {
-  background-color: #002500;
+  background-color: #1a4a1a;
   color: #FFF9FB;
 }
 
@@ -347,12 +360,12 @@
 }
 
 .tag-badge.fisch {
-  background-color: #A7754D;
+  background-color: #1e3a5f;
   color: #FFF9FB;
 }
 
 .tag-badge.scharf {
-  background-color: #070E0F;
+  background-color: #E65100;
   color: #FFF9FB;
 }
 

@@ -120,9 +120,17 @@ const TapasSubSection: React.FC<TapasSubSectionProps> = ({
 
   if (filteredItems.length === 0) return null;
 
+  // Farbe je nach Kategorie
+  const getTitleColor = (t: string): string => {
+    if (t === 'fleisch') return '#740E14';
+    if (t === 'fisch') return '#1e3a5f';
+    if (t === 'vegan & vegetarisch') return '#1a4a1a';
+    return '#A7754D';
+  };
+
   return (
     <div className="mb-4">
-      <h4 className="h5 mb-3" style={{ color: '#A7754D' }}>{title.toLowerCase()}</h4>
+      <h4 className="h5 mb-3" style={{ color: getTitleColor(title) }}>{title.toLowerCase()}</h4>
       <div className="row g-3">
         {filteredItems.map((item) => (
           <div key={item.id} className="col-12 col-md-6 col-lg-4">
