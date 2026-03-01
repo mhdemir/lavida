@@ -142,7 +142,7 @@ const CulinaryJourneySection: React.FC = () => {
           <div className="col-12 col-lg-6 order-2 order-lg-1">
             <div className="position-relative text-center">
               <img 
-                src="/images archiv/image1.jpeg"
+                src="/images-archiv/image1.jpeg"
                 alt="kulinarische weltreise bei la vida"
                 className="img-fluid rounded"
                 style={{ 
