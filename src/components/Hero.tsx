@@ -108,12 +108,11 @@ export const Hero: React.FC<HeroProps> = ({
 
         {/* tagline */}
         <p className="fs-5 mb-5 mx-auto" style={{ maxWidth: '600px', opacity: 0.9 }}>
-          erlebe mediterrane lebensart in entspannter atmosphäre. 
-          authentische tapas, frische meze, erlesene weine und mediterranes ambiente.
+          erlebe mediterrane lebensart in entspannter atmosphäre.
         </p>
 
         {/* feature icons */}
-        <div className="d-flex justify-content-center gap-4 gap-md-5 mb-5 flex-wrap">
+        <div className="d-flex justify-content-center align-items-start gap-4 gap-md-5 mb-5 flex-wrap">
           <div className="text-center">
             <div className="d-inline-flex align-items-center justify-content-center rounded-circle mb-2"
               style={{ 
@@ -151,7 +150,7 @@ export const Hero: React.FC<HeroProps> = ({
             >
               <Music size={28} />
             </div>
-            <p className="small mb-0 opacity-75">mediterranes ambiente</p>
+            <p className="small mb-0 opacity-75">mediterranes<br />ambiente</p>
           </div>
         </div>
 

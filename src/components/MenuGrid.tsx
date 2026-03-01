@@ -283,6 +283,25 @@ export const MenuGrid: React.FC<MenuGridProps> = ({ className = '' }) => {
           </p>
         </div>
 
+        {/* pdf download section */}
+        <div className="mb-5 pb-4 border-bottom">
+          <div className="text-center">
+            <FileText size={32} className="mb-3" style={{ color: '#740E14' }} />
+            <h3 className="h5 mb-2">speisekarte als pdf</h3>
+            <p className="text-muted mb-3">
+              laden sie unsere komplette speisekarte als pdf herunter
+            </p>
+            <a
+              href="/Speisekarte/La_Vida_Speisekarte.pdf"
+              download
+              className="btn btn-primary d-inline-flex align-items-center gap-2"
+            >
+              <Download size={18} />
+              pdf herunterladen
+            </a>
+          </div>
+        </div>
+
         {/* search bar */}
         <div className="row mb-4">
           <div className="col-12 col-md-8 col-lg-6 mx-auto">
@@ -378,25 +397,6 @@ export const MenuGrid: React.FC<MenuGridProps> = ({ className = '' }) => {
               selectedTags={selectedTags}
             />
           ))}
-        </div>
-
-        {/* pdf download section */}
-        <div className="mt-5 pt-4 border-top">
-          <div className="text-center">
-            <FileText size={32} className="mb-3" style={{ color: '#740E14' }} />
-            <h3 className="h5 mb-2">speisekarte als pdf</h3>
-            <p className="text-muted mb-3">
-              laden sie unsere komplette speisekarte als pdf herunter
-            </p>
-            <a
-              href="/Speisekarte/La_Vida_Speisekarte.pdf"
-              download
-              className="btn btn-primary d-inline-flex align-items-center gap-2"
-            >
-              <Download size={18} />
-              pdf herunterladen
-            </a>
-          </div>
         </div>
 
         {/* empty state */}

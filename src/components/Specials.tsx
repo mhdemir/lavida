@@ -145,10 +145,6 @@ export const Specials: React.FC<SpecialsProps> = ({ className = '' }) => {
             className="d-inline-block p-4 rounded-3"
             style={{ backgroundColor: 'rgba(116, 14, 20, 0.05)' }}
           >
-            <p className="mb-2">
-              <strong>hinweis:</strong> alle speisen können auf wunsch auch vegan oder 
-              vegetarisch zubereitet werden.
-            </p>
             <p className="mb-0 text-muted small">
               bei allergien oder unverträglichkeiten sprechen sie uns bitte an.
             </p>

@@ -6,8 +6,7 @@ import {
   Phone, 
   Clock, 
   Mail, 
-  Instagram, 
-  Facebook,
+  Instagram,
   Music,
   Wine,
   UtensilsCrossed
@@ -245,14 +244,16 @@ const Footer: React.FC<FooterProps> = ({ onImpressumClick }) => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = useMemo(() => [
-    { icon: <Instagram size={20} />, href: '#', label: 'instagram' },
-    { icon: <Facebook size={20} />, href: '#', label: 'facebook' },
+    { icon: <Instagram size={20} />, href: 'https://www.instagram.com/lavida.tapas/?hl=de', label: 'instagram' },
+    { icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+      </svg>
+    ), href: 'https://www.tiktok.com/@lavida.tapas', label: 'tiktok' },
   ], []);
 
   const footerLinks = useMemo(() => [
     { label: 'impressum', href: '#impressum', onClick: onImpressumClick },
-    { label: 'datenschutz', href: '#datenschutz' },
-    { label: 'kontakt', href: '#contact' },
   ], [onImpressumClick]);
 
   return (
@@ -273,6 +274,8 @@ const Footer: React.FC<FooterProps> = ({ onImpressumClick }) => {
                 <a
                   key={social.label}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="d-flex align-items-center justify-content-center rounded-circle text-decoration-none"
                   style={{ 
                     width: '40px', 
@@ -356,7 +359,7 @@ const Footer: React.FC<FooterProps> = ({ onImpressumClick }) => {
           <div className="row align-items-center">
             <div className="col-12 col-md-6 text-center text-md-start">
               <p className="mb-0 small" style={{ color: '#9D9597' }}>
-                &copy; {currentYear} la vida restaurant. alle rechte vorbehalten.
+                &copy; 2024 la vida
               </p>
             </div>
             <div className="col-12 col-md-6 text-center text-md-end mt-2 mt-md-0">

@@ -317,9 +317,7 @@
   font-size: 1.25rem;
 }
 
-.price::after {
-  content: ' €';
-}
+
 
 /* tag badges */
 .tag-badge {
