@@ -300,7 +300,7 @@ export const MenuGrid: React.FC<MenuGridProps> = ({ className = '' }) => {
               laden sie unsere komplette speisekarte als pdf herunter
             </p>
             <a
-              href="/Speisekarte/La_Vida_Speisekarte.pdf"
+              href="/La_Vida_Speisekarte.pdf"
               download
               className="btn btn-primary d-inline-flex align-items-center gap-2"
             >
