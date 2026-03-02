@@ -221,7 +221,7 @@ const ContactInfo: React.FC = () => {
     {
       icon: <Clock size={24} />,
       title: 'öffnungszeiten',
-      content: 'di-so: 17:00 - 23:00 uhr\nmo: ruhetag',
+      content: 'mo: 17:00 - 23:00 uhr\ndi: geschlossen\nmi-so: 17:00 - 23:00 uhr\nfr+sa: bis 00:00 uhr',
       href: null,
     },
   ], []);
