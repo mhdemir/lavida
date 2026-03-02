@@ -73,7 +73,7 @@ const HistorySection: React.FC = () => {
             
             <div className="fs-5" style={{ color: '#9D9597', lineHeight: '1.8' }}>
               <p className="mb-4">
-                wo heute im la vida die aromen vieler kulturen verschmelzen, pulsierte schon 1908 das leben. einst als repräsentativer prachtbau im jugendstil erbaut, war der bahnhof langendreer das tor zur welt für das aufstrebende ruhrgebiet. wo früher reisepäck verladen wurde und dampfloks schnauften, empfangen wir euch heute in historischem ambiente.
+                wo heute im la vida die aromen vieler kulturen verschmelzen, pulsierte schon 1908 das leben. einst als repräsentativer prachtbau im jugendstil erbaut, war der bahnhof langendreer das tor zur welt für das aufstrebende ruhrgebiet. wo früher reisegepäck verladen wurde und dampfloks schnauften, empfangen wir euch heute in historischem ambiente.
               </p>
               
               <p className="mb-4">
