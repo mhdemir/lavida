@@ -1,13 +1,15 @@
 // src/components/Navbar.tsx
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { Wine, UtensilsCrossed, Image as ImageIcon, Mail, Menu, X } from 'lucide-react';
+import { Wine, UtensilsCrossed, Image as ImageIcon, Mail, Menu, X, Newspaper } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 interface NavLink {
   id: string;
   label: string;
   href: string;
   icon: React.ReactNode;
+  isExternal?: boolean;
 }
 
 interface NavbarProps {
@@ -44,7 +46,8 @@ const LogoBrand: React.FC<{ src?: string }> = ({ src }) => {
   );
 };
 
-const navLinks: NavLink[] = [
+// Navigation links for homepage (anchor links)
+const homeNavLinks: NavLink[] = [
   {
     id: 'specials',
     label: 'specials',
@@ -75,31 +78,43 @@ export const Navbar: React.FC<NavbarProps> = ({ logoSrc }) => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string>('');
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   const handleScroll = useCallback((): void => {
     const scrollY = window.scrollY;
     setIsScrolled(scrollY > 50);
 
-    // determine active section
-    const sections = navLinks.map(link => link.href.substring(1));
-    for (const sectionId of sections.reverse()) {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        if (rect.top <= 100) {
-          setActiveSection(sectionId);
-          break;
+    // determine active section (only on homepage)
+    if (isHomePage) {
+      const sections = homeNavLinks.map(link => link.href.substring(1));
+      for (const sectionId of sections.reverse()) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= 100) {
+            setActiveSection(sectionId);
+            break;
+          }
         }
       }
     }
-  }, []);
+  }, [isHomePage]);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
+  // Reset scroll state when changing pages
+  useEffect(() => {
+    setIsScrolled(window.scrollY > 50);
+    setActiveSection('');
+  }, [location.pathname]);
+
   const handleNavClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string): void => {
+    if (!isHomePage) return; // Only handle anchor clicks on homepage
+    
     e.preventDefault();
     const targetId = href.substring(1);
     const element = document.getElementById(targetId);
@@ -108,7 +123,7 @@ export const Navbar: React.FC<NavbarProps> = ({ logoSrc }) => {
       element.scrollIntoView({ behavior: 'smooth' });
       setIsExpanded(false);
     }
-  }, []);
+  }, [isHomePage]);
 
   const toggleNavbar = useCallback((): void => {
     setIsExpanded(prev => !prev);
@@ -126,16 +141,17 @@ export const Navbar: React.FC<NavbarProps> = ({ logoSrc }) => {
     >
       <div className="container">
         {/* logo / brand */}
-        <a 
+        <Link 
           className="navbar-brand d-flex align-items-center gap-2" 
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+          to="/"
+          onClick={() => {
+            if (isHomePage) {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
           }}
         >
           <LogoBrand src={logoSrc} />
-        </a>
+        </Link>
 
         {/* mobile toggle button */}
         <button
@@ -155,7 +171,8 @@ export const Navbar: React.FC<NavbarProps> = ({ logoSrc }) => {
           id="navbarNav"
         >
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            {navLinks.map((link) => (
+            {/* Homepage anchor links (only on homepage) */}
+            {isHomePage && homeNavLinks.map((link) => (
               <li className="nav-item" key={link.id}>
                 <a
                   className={`nav-link d-flex align-items-center gap-2 ${activeSection === link.id ? 'active' : ''}`}
@@ -168,18 +185,33 @@ export const Navbar: React.FC<NavbarProps> = ({ logoSrc }) => {
                 </a>
               </li>
             ))}
+            
+            {/* News & Blog Link */}
+            <li className="nav-item">
+              <Link
+                className={`nav-link d-flex align-items-center gap-2 ${location.pathname === '/news-blog' ? 'active' : ''}`}
+                to="/news-blog"
+                onClick={closeNavbar}
+                aria-current={location.pathname === '/news-blog' ? 'page' : undefined}
+              >
+                <Newspaper size={18} />
+                <span>news & blog</span>
+              </Link>
+            </li>
           </ul>
 
-          {/* cta button */}
-          <div className="ms-lg-3 mt-3 mt-lg-0">
-            <a
-              href="#reservation"
-              className="btn btn-outline-light btn-sm"
-              onClick={(e) => handleNavClick(e, '#contact')}
-            >
-              reservieren
-            </a>
-          </div>
+          {/* cta button (only on homepage) */}
+          {isHomePage && (
+            <div className="ms-lg-3 mt-3 mt-lg-0">
+              <a
+                href="#contact"
+                className="btn btn-outline-light btn-sm"
+                onClick={(e) => handleNavClick(e, '#contact')}
+              >
+                reservieren
+              </a>
+            </div>
+          )}
         </div>
       </div>
 
